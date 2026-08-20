@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphones | Tapas Mobile Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>tailwind.config = tailwindConfig;</script>
+    <style>
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-background text-primary font-sans antialiased overflow-x-hidden pt-20">
+
+    <div class="bg-[#09090b] text-white pt-24 pb-32 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-50 bg-[url('assets/images/mobiles_hero.jpg')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#09090b] via-[#09090b]/90 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#09090b] to-transparent opacity-80"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-2xl reveal">
+                <span class="text-accent font-black tracking-widest uppercase text-xs mb-4 block drop-shadow-md">Premium Smartphones</span>
+                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-[1.05] tracking-tight text-white drop-shadow-2xl">The Latest <br>Mobile Tech.</h1>
+                <p class="text-gray-300 text-lg mb-8 font-medium max-w-lg">Discover flagship devices, powerful mid-rangers, and budget-friendly smartphones from the world's top brands.</p>
+                <a href="#catalogue" class="bg-white text-black px-8 py-4 rounded-xl font-black text-sm uppercase tracking-wider inline-flex items-center gap-2 hover:bg-gray-200 transition-colors shadow-xl">
+                    View Catalogue <i class="fas fa-arrow-down"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20 mb-16">
+        <div class="bg-white rounded-3xl shadow-2xl border border-gray-100 p-8 flex flex-wrap justify-between items-center gap-6">
+            <a href="products.html?category=Smartphones&brand=Apple" class="opacity-50 hover:opacity-100 hover:text-black transition-all text-center px-4 transform hover:scale-110"><i class="fab fa-apple text-4xl mb-2 block"></i><span class="text-xs font-bold uppercase tracking-widest">Apple</span></a>
+            <a href="products.html?category=Smartphones&brand=Samsung" class="opacity-50 hover:opacity-100 hover:text-blue-600 transition-all text-center px-4 transform hover:scale-110"><i class="fab fa-android text-4xl mb-2 block"></i><span class="text-xs font-bold uppercase tracking-widest">Samsung</span></a>
+            <a href="products.html?category=Smartphones&brand=OnePlus" class="opacity-50 hover:opacity-100 hover:text-red-600 transition-all text-center px-4 transform hover:scale-110"><span class="text-2xl font-black mb-2 block">1+</span><span class="text-xs font-bold uppercase tracking-widest">OnePlus</span></a>
+            <a href="products.html?category=Smartphones&brand=Vivo" class="opacity-50 hover:opacity-100 hover:text-blue-500 transition-all text-center px-4 transform hover:scale-110"><span class="text-2xl font-black mb-2 block">vivo</span><span class="text-xs font-bold uppercase tracking-widest">Vivo</span></a>
+            <a href="products.html?category=Smartphones&brand=OPPO" class="opacity-50 hover:opacity-100 hover:text-green-500 transition-all text-center px-4 transform hover:scale-110"><span class="text-2xl font-black mb-2 block">OPPO</span><span class="text-xs font-bold uppercase tracking-widest">OPPO</span></a>
+        </div>
+    </div>
+
+    <section id="catalogue" class="py-12 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-black text-primary mb-12 tracking-tight text-center reveal">Featured Smartphones</h2>
+            <div id="mobile-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+            
+            <div class="mt-16 text-center reveal">
+                <a href="products.html?category=Smartphones" class="inline-block bg-white border-2 border-primary text-primary px-10 py-4 rounded-xl font-black text-sm uppercase tracking-wider hover:bg-primary hover:text-white transition-colors">
+                    See All Smartphones
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('mobile-grid');
+            if(grid && typeof products !== 'undefined') {
+                const mobiles = products.filter(p => p.category === 'Smartphones');
+                let html = '';
+                mobiles.slice(0, 8).forEach(p => {
+                    let cardHtml = createProductCard(p);
+                    cardHtml = cardHtml.replace('reveal', 'opacity-100 translate-y-0');
+                    html += cardHtml;
+                });
+                grid.innerHTML = html;
+            }
+        });
+    </script>
+</body>
+</html>

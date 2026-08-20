@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews & Customers | Tapas Mobile Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/main.js"></script>
+    <script>tailwind.config = tailwindConfig;</script>
+    <style>
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .masonry { column-count: 1; column-gap: 1.5rem; }
+        @media (min-width: 640px) { .masonry { column-count: 2; } }
+        .masonry-item { break-inside: avoid; margin-bottom: 1.5rem; }
+    </style>
+</head>
+<body class="bg-background text-primary font-sans antialiased overflow-x-hidden pt-20">
+
+    <div class="bg-primary text-white py-20 md:py-32 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('assets/images/showroom_premium.jpg')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
+        <div class="max-w-3xl mx-auto px-4 reveal relative z-10">
+            <h1 class="text-5xl md:text-6xl font-black mb-6 tracking-tight">Happy Customers</h1>
+            <p class="text-gray-300 text-lg leading-relaxed font-medium">We are Odisha's most trusted destination for premium technology, providing genuine products and expert service to our community.</p>
+        </div>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <div class="flex flex-col lg:flex-row gap-16 items-center mb-24">
+            <div class="lg:w-1/2 reveal">
+                <h2 class="text-4xl font-black text-primary mb-6 tracking-tight">More Than Just a Showroom</h2>
+                <p class="text-secondary text-lg mb-6 leading-relaxed font-medium">
+                    At Tapas Mobile Care, we believe that buying a new device should be an experience. Since our inception, we have been dedicated to bringing the latest and most reliable technology to Kalimela.
+                </p>
+                <div class="grid grid-cols-2 gap-6 mt-8">
+                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50">
+                        <div class="text-4xl font-black text-accent mb-2">100%</div>
+                        <div class="text-xs font-bold text-secondary uppercase tracking-widest">Genuine Products</div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50">
+                        <div class="text-4xl font-black text-accent mb-2">42K+</div>
+                        <div class="text-xs font-bold text-secondary uppercase tracking-widest">Happy Community</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:w-1/2 w-full reveal" style="transition-delay: 0.2s;">
+                <div class="bg-white p-6 rounded-[2.5rem] shadow-2xl border border-gray-100 transform rotate-2 hover:rotate-0 transition-transform duration-700">
+                    <div class="flex items-center justify-between mb-6 px-2">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-gray-100">
+                                <img src="assets/images/instagram-profile.png" alt="Profile" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <span class="font-black text-primary text-lg block tracking-tight">@tapas_mobile_care</span>
+                                <span class="text-sm font-medium text-secondary">Join our Instagram family</span>
+                            </div>
+                        </div>
+                        <a href="https://www.instagram.com/tapas_mobile_care" target="_blank" class="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                    <div class="aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100 relative group">
+                         <img src="assets/images/storefront.png" alt="Showroom Exterior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mb-16 reveal">
+            <h2 class="text-4xl font-black text-primary mb-4 tracking-tight">Real People, Real Reviews</h2>
+            <p class="text-secondary text-lg font-medium">Experience our showroom through the eyes of our customers.</p>
+        </div>
+
+        <div class="masonry reveal">
+            <div class="masonry-item rounded-3xl overflow-hidden relative group shadow-xl border-4 border-white">
+                <img src="assets/images/customer-2_cropped.png" alt="Customer with HP Laptop" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                    <div class="flex text-yellow-400 text-sm mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <span class="text-white font-bold text-lg">"Got the best deal on my HP laptop. Highly recommended!"</span>
+                </div>
+            </div>
+            <div class="masonry-item rounded-3xl overflow-hidden relative group shadow-xl border-4 border-white">
+                <img src="assets/images/customer-1_cropped.png" alt="Customer Interaction" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                    <div class="flex text-yellow-400 text-sm mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <span class="text-white font-bold text-lg">"Excellent service and genuine products."</span>
+                </div>
+            </div>
+            <div class="masonry-item rounded-3xl overflow-hidden relative group shadow-xl border-4 border-white">
+                <img src="assets/images/customer-3_cropped.png" alt="Family Shopping" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                    <div class="flex text-yellow-400 text-sm mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <span class="text-white font-bold text-lg">"Trusted by our whole family for years."</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
