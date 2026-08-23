@@ -420,15 +420,15 @@ window.init3DTilt = init3DTilt;
 function createProductCard(product) {
     const waLink = generateWhatsAppLink(product.name);
     return `
-        <div class="tilt-3d bg-surface rounded-2xl p-5 shadow-md hover:shadow-2xl border border-gray-100 transition-all duration-500 group flex flex-col h-full reveal relative overflow-hidden" style="transform-style: preserve-3d;">
+        <div class="tilt-3d bg-surface rounded-2xl p-3 sm:p-5 shadow-md hover:shadow-2xl border border-gray-100 transition-all duration-500 group flex flex-col h-full reveal relative overflow-hidden" style="transform-style: preserve-3d;">
             <!-- Hover Glow Effect -->
             <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
             
             <!-- Premium 3D Glare Layer -->
             <div class="tilt-glare absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 opacity-0 pointer-events-none z-50 rounded-2xl mix-blend-overlay transition-opacity duration-300 pointer-events-none w-[200%] h-[200%] -left-[50%] -top-[50%]"></div>
             
-            <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-gray-50/50 mb-5 flex items-center justify-center p-4 border border-gray-100" style="transform: translateZ(20px);">
-                ${product.badge ? `<span class="absolute top-3 left-3 bg-primary text-white text-[10px] font-black px-3 py-1 rounded-full z-10 shadow-lg tracking-wider uppercase">${product.badge}</span>` : ''}
+            <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-gray-50/50 mb-3 sm:mb-5 flex items-center justify-center p-2 sm:p-4 border border-gray-100" style="transform: translateZ(20px);">
+                ${product.badge ? `<span class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-primary text-white text-[8px] sm:text-[10px] font-black px-2 py-1 sm:px-3 sm:py-1 rounded-full z-10 shadow-lg tracking-wider uppercase">${product.badge}</span>` : ''}
                 <img src="${product.image}" alt="${product.name}" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 drop-shadow-xl" loading="lazy">
                 
                 <!-- Quick Add Overlay (Desktop) -->
@@ -440,22 +440,22 @@ function createProductCard(product) {
             </div>
             
             <div class="flex-grow flex flex-col relative z-10" style="transform: translateZ(15px);">
-                <span class="text-[10px] font-black text-accent uppercase tracking-widest mb-1">${product.brand}</span>
-                <h4 class="font-bold text-lg text-primary mb-2 line-clamp-1 group-hover:text-accent transition-colors">${product.name}</h4>
-                <p class="text-xs text-secondary mb-4 line-clamp-2 leading-relaxed">${product.shortDesc}</p>
-                <div class="mt-auto pt-4 border-t border-gray-100">
-                    <p class="font-black text-primary mb-4 text-lg">${product.price}</p>
+                <span class="text-[8px] sm:text-[10px] font-black text-accent uppercase tracking-widest mb-1">${product.brand}</span>
+                <h4 class="font-bold text-sm sm:text-lg text-primary mb-1 sm:mb-2 line-clamp-1 group-hover:text-accent transition-colors">${product.name}</h4>
+                <p class="text-[10px] sm:text-xs text-secondary mb-3 sm:mb-4 line-clamp-2 leading-relaxed">${product.shortDesc}</p>
+                <div class="mt-auto pt-3 sm:pt-4 border-t border-gray-100">
+                    <p class="font-black text-primary mb-3 sm:mb-4 text-sm sm:text-lg">${product.price}</p>
                     <div class="flex flex-col gap-2">
                         <div class="grid grid-cols-2 gap-2">
-                            <a href="product-details.html?id=${product.id}" class="w-full text-center bg-gray-100 hover:bg-gray-200 text-primary py-3 rounded-xl font-bold transition-colors text-sm">
+                            <a href="product-details.html?id=${product.id}" class="w-full text-center bg-gray-100 hover:bg-gray-200 text-primary py-2 sm:py-3 rounded-lg sm:rounded-xl font-bold transition-colors text-xs sm:text-sm">
                                 Details
                             </a>
-                            <button onclick="addToCart('${product.id}')" class="w-full sm:hidden text-center bg-primary hover:bg-black text-white py-3 rounded-xl font-bold transition-colors text-sm shadow-md">
+                            <button onclick="addToCart('${product.id}')" class="w-full sm:hidden text-center bg-primary hover:bg-black text-white py-2 sm:py-3 rounded-lg sm:rounded-xl font-bold transition-colors text-xs sm:text-sm shadow-md">
                                 Cart
                             </button>
                         </div>
-                        <a href="${waLink}" target="_blank" class="w-full text-center bg-[#25D366] hover:bg-[#1DA851] text-white py-3 rounded-xl font-bold transition-all flex items-center justify-center gap-2 text-sm shadow-lg shadow-[#25D366]/20">
-                            <i class="fab fa-whatsapp text-lg"></i> Inquiry
+                        <a href="${waLink}" target="_blank" class="w-full text-center bg-[#25D366] hover:bg-[#1DA851] text-white py-2 sm:py-3 rounded-lg sm:rounded-xl font-bold transition-all flex items-center justify-center gap-2 text-xs sm:text-sm shadow-lg shadow-[#25D366]/20">
+                            <i class="fab fa-whatsapp text-sm sm:text-lg"></i> Inquiry
                         </a>
                     </div>
                 </div>
