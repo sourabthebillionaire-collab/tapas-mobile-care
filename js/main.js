@@ -220,15 +220,15 @@ function renderAppShell() {
         </div>
     </div>
     
-    <!-- Floating Social Icons -->
-    <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
-        <a href="https://www.instagram.com/tapas_mobile_care" target="_blank" class="bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 border-2 border-white" title="Follow us on Instagram">
-            <i class="fab fa-instagram text-3xl"></i>
-        </a>
-        <a href="https://wa.me/918018048111" target="_blank" class="bg-brand text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 border-2 border-white" title="Chat on WhatsApp">
-            <i class="fab fa-whatsapp text-3xl"></i>
-        </a>
-    </div>
+      <!-- Floating Social Icons -->
+      <div class="fixed bottom-4 right-4 lg:bottom-6 lg:right-6 z-40 flex flex-col gap-3">
+          <a href="https://www.instagram.com/tapas_mobile_care" target="_blank" class="bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 border-2 border-white" title="Follow us on Instagram">
+              <i class="fab fa-instagram text-2xl lg:text-3xl"></i>
+          </a>
+          <a href="https://wa.me/918018048111" target="_blank" class="bg-brand text-white w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 border-2 border-white" title="Chat on WhatsApp">
+              <i class="fab fa-whatsapp text-2xl lg:text-3xl"></i>
+          </a>
+      </div>
     `;
 
     const footerHtml = `
