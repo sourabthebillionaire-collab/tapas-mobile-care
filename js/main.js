@@ -351,17 +351,83 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
 
     revealElements.forEach(el => revealObserver.observe(el));
+    
+    // Initialize 3D Tilt for static elements
+    setTimeout(init3DTilt, 500);
 });
 
-// Render a single product card (Updated with Add to Cart)
+// Premium 3D Tilt Effect (Vanilla JS)
+function init3DTilt() {
+    const tiltElements = document.querySelectorAll('.tilt-3d');
+    
+    if (window.matchMedia("(hover: hover)").matches) {
+        tiltElements.forEach(el => {
+            // Remove existing listeners if called multiple times
+            el.removeEventListener('mousemove', handleTilt);
+            el.removeEventListener('mouseleave', resetTilt);
+            el.removeEventListener('mouseenter', setupTilt);
+            
+            el.addEventListener('mousemove', handleTilt);
+            el.addEventListener('mouseleave', resetTilt);
+            el.addEventListener('mouseenter', setupTilt);
+            
+            // Add will-change for performance
+            el.style.willChange = 'transform';
+            el.style.transformStyle = 'preserve-3d';
+        });
+    }
+
+    function setupTilt(e) {
+        const el = e.currentTarget;
+        el.style.transition = 'transform 0.1s ease-out';
+    }
+
+    function handleTilt(e) {
+        const el = e.currentTarget;
+        const rect = el.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        
+        const maxTilt = 8; // Gentle Apple-like tilt
+        const tiltX = -(y * maxTilt * 2).toFixed(2);
+        const tiltY = (x * maxTilt * 2).toFixed(2);
+        
+        const glare = el.querySelector('.tilt-glare');
+        if(glare) {
+            glare.style.opacity = '1';
+            glare.style.transform = `translate(${x * 100}%, ${y * 100}%)`;
+        }
+
+        el.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.02, 1.02, 1.02)`;
+    }
+
+    function resetTilt(e) {
+        const el = e.currentTarget;
+        el.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        
+        const glare = el.querySelector('.tilt-glare');
+        if(glare) {
+            glare.style.opacity = '0';
+        }
+    }
+}
+
+// Make sure to expose init3DTilt globally so inline scripts can re-trigger it
+window.init3DTilt = init3DTilt;
+
+// Render a single product card (Updated with Add to Cart & 3D Tilt)
 function createProductCard(product) {
     const waLink = generateWhatsAppLink(product.name);
     return `
-        <div class="bg-surface rounded-2xl p-5 shadow-md hover:shadow-2xl border border-gray-100 transition-all duration-500 group flex flex-col h-full reveal relative overflow-hidden">
+        <div class="tilt-3d bg-surface rounded-2xl p-5 shadow-md hover:shadow-2xl border border-gray-100 transition-all duration-500 group flex flex-col h-full reveal relative overflow-hidden" style="transform-style: preserve-3d;">
             <!-- Hover Glow Effect -->
-            <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
             
-            <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-gray-50/50 mb-5 flex items-center justify-center p-4 border border-gray-100">
+            <!-- Premium 3D Glare Layer -->
+            <div class="tilt-glare absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 opacity-0 pointer-events-none z-50 rounded-2xl mix-blend-overlay transition-opacity duration-300 pointer-events-none w-[200%] h-[200%] -left-[50%] -top-[50%]"></div>
+            
+            <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-gray-50/50 mb-5 flex items-center justify-center p-4 border border-gray-100" style="transform: translateZ(20px);">
                 ${product.badge ? `<span class="absolute top-3 left-3 bg-primary text-white text-[10px] font-black px-3 py-1 rounded-full z-10 shadow-lg tracking-wider uppercase">${product.badge}</span>` : ''}
                 <img src="${product.image}" alt="${product.name}" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 drop-shadow-xl" loading="lazy">
                 
@@ -373,7 +439,7 @@ function createProductCard(product) {
                 </div>
             </div>
             
-            <div class="flex-grow flex flex-col relative z-10">
+            <div class="flex-grow flex flex-col relative z-10" style="transform: translateZ(15px);">
                 <span class="text-[10px] font-black text-accent uppercase tracking-widest mb-1">${product.brand}</span>
                 <h4 class="font-bold text-lg text-primary mb-2 line-clamp-1 group-hover:text-accent transition-colors">${product.name}</h4>
                 <p class="text-xs text-secondary mb-4 line-clamp-2 leading-relaxed">${product.shortDesc}</p>
@@ -397,3 +463,4 @@ function createProductCard(product) {
         </div>
     `;
 }
+
