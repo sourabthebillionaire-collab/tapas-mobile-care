@@ -232,62 +232,74 @@ function renderAppShell() {
     `;
 
     const footerHtml = `
-    <!-- Ultra Premium Footer -->
-    <footer class="bg-primary pt-20 pb-10 text-white border-t-4 border-accent">
+    <!-- Trust Badges -->
+    <div class="bg-white border-t border-gray-100 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                <div class="lg:col-span-2">
-                    <a href="index.html" class="text-3xl font-black tracking-tight text-white mb-6 block flex items-center gap-2">
-                        <i class="fas fa-mobile text-accent"></i> Tapas<span class="text-accent">Mobile</span>Care
-                    </a>
-                    <p class="text-gray-400 mb-8 max-w-sm leading-relaxed text-sm">
-                        Odisha's No.1 Premium Technology Showroom. Experience the best in smartphones, laptops, and smart accessories with unmatched service.
-                    </p>
-                    <div class="flex gap-4">
-                        <a href="https://www.instagram.com/tapas_mobile_care" target="_blank" class="w-12 h-12 rounded-full bg-white/5 hover:bg-pink-600 flex items-center justify-center transition-colors border border-white/10">
-                            <i class="fab fa-instagram text-lg"></i>
-                        </a>
-                        <a href="https://wa.me/918018048111" target="_blank" class="w-12 h-12 rounded-full bg-white/5 hover:bg-brand flex items-center justify-center transition-colors border border-white/10">
-                            <i class="fab fa-whatsapp text-lg"></i>
-                        </a>
-                        <a href="contact.html" class="w-12 h-12 rounded-full bg-white/5 hover:bg-accent flex items-center justify-center transition-colors border border-white/10">
-                            <i class="fas fa-envelope text-lg"></i>
-                        </a>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center text-xl shrink-0 mx-auto sm:mx-0"><i class="fas fa-award"></i></div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-sm">100% Original</h4>
+                        <p class="text-xs text-gray-500">Genuine Products</p>
                     </div>
                 </div>
-                <div>
-                    <h4 class="font-bold mb-6 text-lg tracking-wider">STORE</h4>
-                    <ul class="space-y-4 text-gray-400 text-sm font-medium">
-                        <li><a href="products.html" class="hover:text-accent transition-colors flex items-center gap-2"><i class="fas fa-angle-right text-xs"></i> All Products</a></li>
-                        <li><a href="mobiles.html" class="hover:text-accent transition-colors flex items-center gap-2"><i class="fas fa-angle-right text-xs"></i> Smartphones</a></li>
-                        <li><a href="laptops.html" class="hover:text-accent transition-colors flex items-center gap-2"><i class="fas fa-angle-right text-xs"></i> Laptops</a></li>
-                        <li><a href="offers.html" class="hover:text-accent transition-colors flex items-center gap-2"><i class="fas fa-angle-right text-xs"></i> Special Offers</a></li>
-                    </ul>
+                <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center text-xl shrink-0 mx-auto sm:mx-0"><i class="far fa-credit-card"></i></div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-sm">Secure Payments</h4>
+                        <p class="text-xs text-gray-500">Safe & Fast Payments</p>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="font-bold mb-6 text-lg tracking-wider">CONTACT</h4>
-                    <ul class="space-y-4 text-gray-400 text-sm">
-                        <li class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0 text-accent"><i class="fas fa-map-marker-alt"></i></div>
-                            <span class="mt-1">Kalimela Main Road,<br>Malkangiri, Odisha</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0 text-accent"><i class="fas fa-phone-alt"></i></div>
-                            <span>8018048111</span>
-                        </li>
-                    </ul>
+                <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center text-xl shrink-0 mx-auto sm:mx-0"><i class="fas fa-shield-alt"></i></div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-sm">1 Year Warranty</h4>
+                        <p class="text-xs text-gray-500">On All Products</p>
+                    </div>
                 </div>
-            </div>
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-gray-500 text-sm font-medium">&copy; 2024 Tapas Mobile Care. Odisha's No.1 Showroom.</p>
-                <div class="flex items-center gap-4 text-gray-500 text-2xl opacity-50">
-                    <i class="fab fa-apple"></i>
-                    <i class="fab fa-android"></i>
-                    <i class="fab fa-windows"></i>
+                <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center text-xl shrink-0 mx-auto sm:mx-0"><i class="fas fa-truck"></i></div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-sm">Fast Delivery</h4>
+                        <p class="text-xs text-gray-500">Across Odisha</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+
+    <!-- Mockup Footer -->
+    <div class="bg-white pb-6 px-4 sm:px-8">
+        <footer class="bg-[#050511] text-white py-10 sm:py-12 rounded-3xl shadow-2xl overflow-hidden relative max-w-7xl mx-auto">
+            <!-- Background glow -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[80px] rounded-full pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto px-6 sm:px-10 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-center divide-y md:divide-y-0 md:divide-x divide-white/10">
+                    <div class="flex items-center gap-4 py-4 md:py-0">
+                        <div class="w-12 h-12 bg-blue-600/20 text-blue-500 rounded-full flex items-center justify-center text-xl shrink-0"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm mb-1">Visit Our Showroom</h4>
+                            <p class="text-xs text-gray-400">Tapas Mobile Care, Kalimela Main Rd,<br>Malkangiri, Odisha 764045</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 py-4 md:py-0 md:pl-8">
+                        <div class="w-12 h-12 bg-blue-600/20 text-blue-500 rounded-full flex items-center justify-center text-xl shrink-0"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm mb-1">Call Us</h4>
+                            <p class="text-xs text-gray-400">+91 8018048111</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 py-4 md:py-0 md:pl-8">
+                        <div class="w-12 h-12 bg-blue-600/20 text-blue-500 rounded-full flex items-center justify-center text-xl shrink-0"><i class="far fa-clock"></i></div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm mb-1">Open Time</h4>
+                            <p class="text-xs text-gray-400">10:00 AM - 8:00 PM<br>(All Days)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
     `;
 
     document.body.insertAdjacentHTML('afterbegin', navHtml);
@@ -416,51 +428,45 @@ function init3DTilt() {
 // Make sure to expose init3DTilt globally so inline scripts can re-trigger it
 window.init3DTilt = init3DTilt;
 
-// Render a single product card (Updated with Add to Cart & 3D Tilt)
+// Render a single product card (Updated to Ultra-Premium Mockup Style)
 function createProductCard(product) {
-    const waLink = generateWhatsAppLink(product.name);
+    let badgeColor = 'bg-black';
+    if(product.badge) {
+        let b = product.badge.toLowerCase();
+        if(b.includes('bestseller') || b.includes('best seller')) badgeColor = 'bg-blue-500';
+        else if(b.includes('deal') || b.includes('sale') || b.includes('offer')) badgeColor = 'bg-red-500';
+        else if(b.includes('new')) badgeColor = 'bg-black';
+    }
+
     return `
-        <div class="tilt-3d bg-surface rounded-2xl p-3 sm:p-5 shadow-md hover:shadow-2xl border border-gray-100 transition-all duration-500 group flex flex-col h-full reveal relative overflow-hidden" style="transform-style: preserve-3d;">
-            <!-- Hover Glow Effect -->
-            <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-            
+        <a href="product-details.html?id=${product.id}" class="tilt-3d block bg-white rounded-3xl p-4 sm:p-5 shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-500 group relative overflow-hidden" style="transform-style: preserve-3d;">
             <!-- Premium 3D Glare Layer -->
-            <div class="tilt-glare absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 opacity-0 pointer-events-none z-50 rounded-2xl mix-blend-overlay transition-opacity duration-300 pointer-events-none w-[200%] h-[200%] -left-[50%] -top-[50%]"></div>
+            <div class="tilt-glare absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 opacity-0 pointer-events-none z-50 rounded-3xl mix-blend-overlay transition-opacity duration-300 w-[200%] h-[200%] -left-[50%] -top-[50%]"></div>
             
-            <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-gray-50/50 mb-3 sm:mb-5 flex items-center justify-center p-2 sm:p-4 border border-gray-100" style="transform: translateZ(20px);">
-                ${product.badge ? `<span class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-primary text-white text-[8px] sm:text-[10px] font-black px-2 py-1 sm:px-3 sm:py-1 rounded-full z-10 shadow-lg tracking-wider uppercase">${product.badge}</span>` : ''}
-                <img src="${product.image}" alt="${product.name}" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700 drop-shadow-xl" loading="lazy">
-                
-                <!-- Quick Add Overlay (Desktop) -->
-                <div class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 hidden sm:block">
-                    <button onclick="addToCart('${product.id}')" class="w-full bg-primary/90 backdrop-blur-md text-white py-3 rounded-xl font-bold shadow-xl hover:bg-black transition-colors text-sm flex items-center justify-center gap-2">
-                        <i class="fas fa-cart-plus"></i> Quick Add
-                    </button>
-                </div>
+            <!-- Top Bar: Badge & Heart -->
+            <div class="flex justify-between items-start mb-4 relative z-10" style="transform: translateZ(15px);">
+                ${product.badge ? `<span class="${badgeColor} text-white text-[8px] sm:text-[10px] font-bold px-3 py-1 rounded-full shadow-sm tracking-wider uppercase">${product.badge}</span>` : '<div></div>'}
+                <button class="text-gray-400 hover:text-red-500 transition-colors z-20" onclick="event.preventDefault(); this.querySelector('i').classList.toggle('far'); this.querySelector('i').classList.toggle('fas'); this.querySelector('i').classList.toggle('text-red-500');">
+                    <i class="far fa-heart text-sm sm:text-base"></i>
+                </button>
             </div>
             
-            <div class="flex-grow flex flex-col relative z-10" style="transform: translateZ(15px);">
-                <span class="text-[8px] sm:text-[10px] font-black text-accent uppercase tracking-widest mb-1">${product.brand}</span>
-                <h4 class="font-bold text-sm sm:text-lg text-primary mb-1 sm:mb-2 line-clamp-1 group-hover:text-accent transition-colors">${product.name}</h4>
-                <p class="text-[10px] sm:text-xs text-secondary mb-3 sm:mb-4 line-clamp-2 leading-relaxed">${product.shortDesc}</p>
-                <div class="mt-auto pt-3 sm:pt-4 border-t border-gray-100">
-                    <p class="font-black text-primary mb-3 sm:mb-4 text-sm sm:text-lg">${product.price}</p>
-                    <div class="flex flex-col gap-2">
-                        <div class="grid grid-cols-2 gap-2">
-                            <a href="product-details.html?id=${product.id}" class="w-full text-center bg-gray-100 hover:bg-gray-200 text-primary py-2 sm:py-3 rounded-lg sm:rounded-xl font-bold transition-colors text-xs sm:text-sm">
-                                Details
-                            </a>
-                            <button onclick="addToCart('${product.id}')" class="w-full sm:hidden text-center bg-primary hover:bg-black text-white py-2 sm:py-3 rounded-lg sm:rounded-xl font-bold transition-colors text-xs sm:text-sm shadow-md">
-                                Cart
-                            </button>
-                        </div>
-                        <a href="${waLink}" target="_blank" class="w-full text-center bg-[#25D366] hover:bg-[#1DA851] text-white py-2 sm:py-3 rounded-lg sm:rounded-xl font-bold transition-all flex items-center justify-center gap-2 text-xs sm:text-sm shadow-lg shadow-[#25D366]/20">
-                            <i class="fab fa-whatsapp text-sm sm:text-lg"></i> Inquiry
-                        </a>
-                    </div>
+            <!-- Product Image -->
+            <div class="relative h-32 sm:h-40 mb-4 sm:mb-6 flex items-center justify-center" style="transform: translateZ(25px);">
+                <img src="${product.image}" alt="${product.name}" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500 drop-shadow-lg" loading="lazy">
+            </div>
+            
+            <!-- Product Details -->
+            <div class="relative z-10" style="transform: translateZ(10px);">
+                <h4 class="font-bold text-sm sm:text-base text-gray-900 mb-1 line-clamp-1 group-hover:text-accent transition-colors">${product.name}</h4>
+                <div class="flex justify-between items-end">
+                    <p class="text-[10px] sm:text-xs text-gray-500 font-medium">
+                        From <span class="text-accent font-bold text-sm sm:text-base ml-1">${product.price}</span>
+                    </p>
+                    <i class="fas fa-chevron-right text-gray-300 text-[10px] group-hover:text-accent group-hover:translate-x-1 transition-all"></i>
                 </div>
             </div>
-        </div>
+        </a>
     `;
 }
 
