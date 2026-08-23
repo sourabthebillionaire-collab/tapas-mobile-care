@@ -273,31 +273,40 @@ function renderAppShell() {
         <footer class="bg-[#050511] text-white pt-10 pb-32 sm:py-12 rounded-3xl shadow-2xl overflow-hidden relative max-w-7xl mx-auto">
             <!-- Background glow -->
             <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[80px] rounded-full pointer-events-none"></div>
-            <div class="max-w-7xl mx-auto px-6 sm:px-10 relative z-10">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-center divide-y md:divide-y-0 md:divide-x divide-white/10">
-                    <div class="flex items-center gap-4 py-4 md:py-0">
-                        <div class="w-12 h-12 bg-blue-600/20 text-blue-500 rounded-full flex items-center justify-center text-xl shrink-0"><i class="fas fa-map-marker-alt"></i></div>
-                        <div>
-                            <h4 class="font-bold text-white text-sm mb-1">Visit Our Showroom</h4>
-                            <p class="text-xs text-gray-400">Tapas Mobile Care, Kalimela Main Rd,<br>Malkangiri, Odisha 764045</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4 py-4 md:py-0 md:pl-8">
-                        <div class="w-12 h-12 bg-blue-600/20 text-blue-500 rounded-full flex items-center justify-center text-xl shrink-0"><i class="fas fa-phone-alt"></i></div>
-                        <div>
-                            <h4 class="font-bold text-white text-sm mb-1">Call Us</h4>
-                            <p class="text-xs text-gray-400">+91 8018048111</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4 py-4 md:py-0 md:pl-8">
-                        <div class="w-12 h-12 bg-blue-600/20 text-blue-500 rounded-full flex items-center justify-center text-xl shrink-0"><i class="far fa-clock"></i></div>
-                        <div>
-                            <h4 class="font-bold text-white text-sm mb-1">Open Time</h4>
-                            <p class="text-xs text-gray-400">10:00 AM - 8:00 PM<br>(All Days)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+              <div class="max-w-7xl mx-auto px-6 sm:px-10 relative z-10">
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-8 items-center divide-y md:divide-y-0 md:divide-x divide-white/10">
+                      <!-- Block 1 -->
+                      <div class="flex items-center gap-5 py-6 md:py-0 group">
+                          <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-2xl sm:rounded-full flex items-center justify-center text-lg sm:text-xl shrink-0 shadow-[0_0_20px_rgba(37,99,235,0.3)] group-hover:scale-110 transition-transform duration-300 border border-blue-400/30">
+                              <i class="fas fa-map-marker-alt"></i>
+                          </div>
+                          <div>
+                              <h4 class="font-black text-white text-base sm:text-lg mb-1 tracking-wide">Visit Our Showroom</h4>
+                              <p class="text-xs sm:text-sm text-gray-300 font-medium leading-relaxed">Tapas Mobile Care, Kalimela Main Rd,<br>Malkangiri, Odisha 764045</p>
+                          </div>
+                      </div>
+                      <!-- Block 2 -->
+                      <div class="flex items-center gap-5 py-6 md:py-0 md:pl-8 group">
+                          <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-2xl sm:rounded-full flex items-center justify-center text-lg sm:text-xl shrink-0 shadow-[0_0_20px_rgba(37,99,235,0.3)] group-hover:scale-110 transition-transform duration-300 border border-blue-400/30">
+                              <i class="fas fa-phone-alt"></i>
+                          </div>
+                          <div>
+                              <h4 class="font-black text-white text-base sm:text-lg mb-1 tracking-wide">Call Us</h4>
+                              <p class="text-xs sm:text-sm text-gray-300 font-medium leading-relaxed">+91 8018048111</p>
+                          </div>
+                      </div>
+                      <!-- Block 3 -->
+                      <div class="flex items-center gap-5 py-6 md:py-0 md:pl-8 group">
+                          <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-2xl sm:rounded-full flex items-center justify-center text-lg sm:text-xl shrink-0 shadow-[0_0_20px_rgba(37,99,235,0.3)] group-hover:scale-110 transition-transform duration-300 border border-blue-400/30">
+                              <i class="far fa-clock"></i>
+                          </div>
+                          <div>
+                              <h4 class="font-black text-white text-base sm:text-lg mb-1 tracking-wide">Open Time</h4>
+                              <p class="text-xs sm:text-sm text-gray-300 font-medium leading-relaxed">10:00 AM - 8:00 PM<br>(All Days)</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
         </footer>
     </div>
     `;
