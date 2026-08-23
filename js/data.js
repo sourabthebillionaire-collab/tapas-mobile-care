@@ -6,7 +6,7 @@ const products = [
         brand: 'Apple',
         category: 'Smartphones',
         price: '₹1,59,900',
-        image: 'https://images.unsplash.com/photo-1696446701796-da61225697cc?q=80&w=800&auto=format&fit=crop',
+        image: 'assets/images/mobiles_hero.jpg',
         shortDesc: 'Titanium design. A17 Pro chip. 48MP Main camera.',
         specs: ['6.7" Super Retina XDR', 'A17 Pro chip', '48MP Pro camera system', 'Titanium design'],
         features: 'The most advanced iPhone yet, featuring aerospace-grade titanium design and the blazing fast A17 Pro chip for next-level gaming and performance.',

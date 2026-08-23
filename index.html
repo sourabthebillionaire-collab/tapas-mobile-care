@@ -20,7 +20,7 @@
 <body class="bg-background text-primary font-sans antialiased overflow-x-hidden pt-20">
 
     <!-- Premium Hero Section -->
-    <section class="relative pt-24 pb-20 lg:pt-32 lg:pb-32 overflow-hidden bg-ultra-dark text-white min-h-[90vh] flex items-center">
+    <section class="relative pt-24 pb-12 lg:pt-32 lg:pb-24 overflow-hidden bg-ultra-dark text-white min-h-[90vh] flex items-center">
         <!-- Abstract glowing background -->
         <div class="absolute inset-0 overflow-hidden">
             <div class="absolute -top-[40%] -right-[10%] w-[70%] h-[70%] rounded-full bg-accent/20 blur-[120px]"></div>
@@ -29,7 +29,7 @@
         </div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
+            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-20">
                 <div class="lg:w-1/2 text-center lg:text-left">
                     <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full glass-panel mb-8 text-xs font-bold text-gray-300 reveal uppercase tracking-widest">
                         <span class="w-2 h-2 rounded-full bg-brand animate-pulse shadow-[0_0_10px_#25D366]"></span>
@@ -53,7 +53,7 @@
                 </div>
                 
                 <!-- Framed Storefront Image (Hero) -->
-                <div class="lg:w-1/2 w-full mt-12 lg:mt-0 reveal" style="transition-delay: 0.4s;">
+                <div class="lg:w-1/2 w-full reveal" style="transition-delay: 0.4s;">
                     <div class="tilt-3d relative rounded-3xl p-4 bg-white/10 border border-white/20 shadow-[0_0_50px_rgba(37,99,235,0.2)] transform rotate-2 hover:rotate-0 transition-transform duration-700 backdrop-blur-md" style="transform-style: preserve-3d;">
                         <div class="tilt-glare absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 opacity-0 z-50 rounded-2xl mix-blend-overlay transition-opacity duration-300 w-[200%] h-[200%] -left-[50%] -top-[50%] pointer-events-none"></div>
                         <!-- Camera / Frame styling -->
@@ -93,13 +93,13 @@
     </div>
 
     <!-- Shop by Category -->
-    <section class="py-20 bg-white">
+    <section class="py-12 lg:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 reveal">
+            <div class="text-center mb-10 lg:mb-12 reveal">
                 <h2 class="text-3xl md:text-4xl font-black text-primary tracking-tight">Explore Categories</h2>
                 <p class="text-secondary mt-2">Find exactly what you're looking for</p>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 reveal" style="transition-delay: 0.1s;">
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8 reveal" style="transition-delay: 0.1s;">
                 <!-- Category 1 -->
                 <a href="mobiles.html" class="tilt-3d group relative rounded-3xl overflow-hidden aspect-[4/3] sm:aspect-square flex flex-col items-center justify-center bg-gray-50 shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-100" style="transform-style: preserve-3d;">
                     <div class="tilt-glare absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 opacity-0 z-50 rounded-2xl mix-blend-overlay transition-opacity duration-300 w-[200%] h-[200%] -left-[50%] -top-[50%] pointer-events-none"></div>
@@ -152,12 +152,12 @@
     </section>
 
     <!-- Featured Products Section -->
-    <section class="py-24 bg-background">
+    <section class="py-12 lg:py-24 bg-background">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-end mb-12 reveal">
+            <div class="flex justify-between items-end mb-8 lg:mb-12 reveal">
                 <div>
                     <h2 class="text-xs font-black text-accent tracking-widest uppercase mb-2">Curated Selection</h2>
-                    <h3 class="text-4xl md:text-5xl font-black text-primary tracking-tight">Trending Now</h3>
+                    <h3 class="text-3xl md:text-5xl font-black text-primary tracking-tight">Trending Now</h3>
                 </div>
                 <a href="products.html" class="hidden sm:flex items-center gap-2 text-primary font-bold hover:text-accent transition-colors">
                     View All Catalog <i class="fas fa-arrow-right"></i>
@@ -165,22 +165,22 @@
             </div>
 
             <!-- Inject Featured Products -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6" id="featured-products-container"></div>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6" id="featured-products-container"></div>
             
-            <a href="products.html" class="sm:hidden mt-8 flex justify-center items-center gap-2 w-full bg-white border border-gray-200 text-primary py-4 rounded-xl font-bold shadow-sm">
+            <a href="products.html" class="sm:hidden mt-6 flex justify-center items-center gap-2 w-full bg-white border border-gray-200 text-primary py-4 rounded-xl font-bold shadow-sm">
                 View All Catalog
             </a>
         </div>
     </section>
 
     <!-- Happy Customers (Ultra Premium Showcase) -->
-    <section class="py-24 bg-background relative overflow-hidden border-t border-gray-200">
+    <section class="py-12 lg:py-24 bg-background relative overflow-hidden border-t border-gray-200">
         <div class="absolute top-0 right-0 w-1/3 h-full bg-gray-50 -skew-x-12 transform origin-top opacity-50"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+            <div class="text-center max-w-3xl mx-auto mb-10 lg:mb-16 reveal">
                 <h2 class="text-xs font-black text-accent tracking-widest uppercase mb-2">Join 42K+ Others</h2>
-                <h3 class="text-4xl md:text-5xl font-black text-primary tracking-tight mb-4">Odisha's Happy Customers</h3>
-                <p class="text-secondary text-lg">We deliver smiles and the best technology to our community every day. Thank you for making us No.1.</p>
+                <h3 class="text-3xl md:text-5xl font-black text-primary tracking-tight mb-4">Odisha's Happy Customers</h3>
+                <p class="text-secondary text-sm md:text-lg">We deliver smiles and the best technology to our community every day. Thank you for making us No.1.</p>
             </div>
 
             <!-- CSS Cropped Grid for Professional Look -->
@@ -190,7 +190,7 @@
                     <div class="tilt-glare absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 opacity-0 z-50 rounded-2xl mix-blend-overlay transition-opacity duration-300 w-[200%] h-[200%] -left-[50%] -top-[50%] pointer-events-none"></div>
                     <img src="assets/images/customer-1_cropped.png" alt="Happy Customer" class="w-full h-full object-cover object-center" style="transform: translateZ(10px) scale(1.05);">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4" style="transform: translateZ(30px);">
-                        <div class="flex text-yellow-400 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <div class="flex text-yellow-400 text-xs md:text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     </div>
                 </div>
                 <!-- Customer 2 -->
@@ -198,7 +198,7 @@
                     <div class="tilt-glare absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 opacity-0 z-50 rounded-2xl mix-blend-overlay transition-opacity duration-300 w-[200%] h-[200%] -left-[50%] -top-[50%] pointer-events-none"></div>
                     <img src="assets/images/customer-2_cropped.png" alt="Happy Customer" class="w-full h-full object-cover object-center" style="transform: translateZ(10px) scale(1.05);">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4" style="transform: translateZ(30px);">
-                        <div class="flex text-yellow-400 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <div class="flex text-yellow-400 text-xs md:text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     </div>
                 </div>
                 <!-- Customer 3 -->
@@ -206,7 +206,7 @@
                     <div class="tilt-glare absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 opacity-0 z-50 rounded-2xl mix-blend-overlay transition-opacity duration-300 w-[200%] h-[200%] -left-[50%] -top-[50%] pointer-events-none"></div>
                     <img src="assets/images/customer-3_cropped.png" alt="Happy Customer" class="w-full h-full object-cover object-center" style="transform: translateZ(10px) scale(1.05);">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4" style="transform: translateZ(30px);">
-                        <div class="flex text-yellow-400 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <div class="flex text-yellow-400 text-xs md:text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     </div>
                 </div>
                 <!-- Customer 4 (Storefront/Vibe) -->
@@ -214,7 +214,7 @@
                     <div class="tilt-glare absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 opacity-0 z-50 rounded-2xl mix-blend-overlay transition-opacity duration-300 w-[200%] h-[200%] -left-[50%] -top-[50%] pointer-events-none"></div>
                     <img src="assets/images/storefront_cropped.png" alt="Showroom Vibe" class="w-full h-full object-cover object-center" style="transform: translateZ(10px) scale(1.05);">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4" style="transform: translateZ(30px);">
-                        <span class="text-white font-bold text-sm tracking-widest uppercase">Visit Us Today</span>
+                        <span class="text-white font-bold text-[10px] md:text-sm tracking-widest uppercase">Visit Us Today</span>
                     </div>
                 </div>
             </div>
