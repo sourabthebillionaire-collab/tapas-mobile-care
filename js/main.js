@@ -270,7 +270,7 @@ function renderAppShell() {
 
     <!-- Mockup Footer -->
     <div class="bg-white pb-6 px-4 sm:px-8">
-        <footer class="bg-[#050511] text-white py-10 sm:py-12 rounded-3xl shadow-2xl overflow-hidden relative max-w-7xl mx-auto">
+        <footer class="bg-[#050511] text-white pt-10 pb-32 sm:py-12 rounded-3xl shadow-2xl overflow-hidden relative max-w-7xl mx-auto">
             <!-- Background glow -->
             <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[80px] rounded-full pointer-events-none"></div>
             <div class="max-w-7xl mx-auto px-6 sm:px-10 relative z-10">
