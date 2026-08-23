@@ -276,8 +276,8 @@ function renderAppShell() {
               <div class="max-w-7xl mx-auto px-6 sm:px-10 relative z-10">
                   <div class="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-8 items-center divide-y md:divide-y-0 md:divide-x divide-white/10">
                       <!-- Block 1 -->
-                      <div class="flex items-center gap-5 py-6 md:py-0 group">
-                          <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-2xl sm:rounded-full flex items-center justify-center text-lg sm:text-xl shrink-0 shadow-[0_0_20px_rgba(37,99,235,0.3)] group-hover:scale-110 transition-transform duration-300 border border-blue-400/30">
+                      <div class="flex flex-col items-center text-center gap-3 py-8 md:py-0 group">
+                          <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-2xl flex items-center justify-center text-xl shrink-0 shadow-[0_0_20px_rgba(37,99,235,0.3)] group-hover:scale-110 transition-transform duration-300 border border-blue-400/30">
                               <i class="fas fa-map-marker-alt"></i>
                           </div>
                           <div>
@@ -286,8 +286,8 @@ function renderAppShell() {
                           </div>
                       </div>
                       <!-- Block 2 -->
-                      <div class="flex items-center gap-5 py-6 md:py-0 md:pl-8 group">
-                          <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-2xl sm:rounded-full flex items-center justify-center text-lg sm:text-xl shrink-0 shadow-[0_0_20px_rgba(37,99,235,0.3)] group-hover:scale-110 transition-transform duration-300 border border-blue-400/30">
+                      <div class="flex flex-col items-center text-center gap-3 py-8 md:py-0 md:pl-8 group">
+                          <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-2xl flex items-center justify-center text-xl shrink-0 shadow-[0_0_20px_rgba(37,99,235,0.3)] group-hover:scale-110 transition-transform duration-300 border border-blue-400/30">
                               <i class="fas fa-phone-alt"></i>
                           </div>
                           <div>
@@ -296,8 +296,8 @@ function renderAppShell() {
                           </div>
                       </div>
                       <!-- Block 3 -->
-                      <div class="flex items-center gap-5 py-6 md:py-0 md:pl-8 group">
-                          <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-2xl sm:rounded-full flex items-center justify-center text-lg sm:text-xl shrink-0 shadow-[0_0_20px_rgba(37,99,235,0.3)] group-hover:scale-110 transition-transform duration-300 border border-blue-400/30">
+                      <div class="flex flex-col items-center text-center gap-3 py-8 md:py-0 md:pl-8 group">
+                          <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-2xl flex items-center justify-center text-xl shrink-0 shadow-[0_0_20px_rgba(37,99,235,0.3)] group-hover:scale-110 transition-transform duration-300 border border-blue-400/30">
                               <i class="far fa-clock"></i>
                           </div>
                           <div>
